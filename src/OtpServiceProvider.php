@@ -17,6 +17,10 @@ class OtpServiceProvider extends ServiceProvider
             $config = __DIR__.'/../config/otp.php', 'otp'
         );
 
+        if ($this->app->runningInConsole()) {
+            $this->publishes([$config => config_path('otp.php')], 'otp');
+        }
+
         $this->app->alias('otp', Otp::class);
         $this->app->singleton('otp', function () {
             return new Otp;
