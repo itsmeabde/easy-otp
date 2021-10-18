@@ -1,0 +1,37 @@
+{
+    "name": "itsmeabde/easy-otp",
+    "description": "Easy OTP (Onetime Password) for Laravel 7|8",
+    "keywords": ["otp", "laravel"],
+    "homepage": "https://github.com/itsmeabde/easy-otp",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Itsmeabde\\EasyOtp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Muhammad Abdi",
+            "email": "itsmeabde@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "require": {
+        "php": "^7.2.5|^8"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Itsmeabde\\EasyOtp\\OtpServiceProvider"
+            ],
+            "aliases": {
+                "Otp": "Itsmeabde\\EasyOtp\\Facades\\Otp"
+            }
+        }
+    }
+}
