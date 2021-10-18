@@ -88,7 +88,7 @@ class OtpController extends Controller
             [$identifier, $pin, $expiresIn] = $this->otp->generate(
                 $request->input('identifier'),
                 function ($identifier, $pin, $expiresIn) {
-                    // Send resend notification to users
+                    // Resend notification to users
                 }, $requestExtraTime = true);
         } catch (OtpException $e) {
             throw ValidationException::withMessages(
