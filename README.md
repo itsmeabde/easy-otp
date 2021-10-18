@@ -23,6 +23,10 @@ $ php artisan migrate
 ## Usage
 
 ``` php
+use App\Http\Controllers\Controller;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 use Itsmeabde\EasyOtp\Exceptions\OtpException;
 use Itsmeabde\EasyOtp\Otp;
 
